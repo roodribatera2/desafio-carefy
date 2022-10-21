@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Desafio Carfy</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#347ae3">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h1>
+          <span class="text-color-white">Desafio</span>
+          <img class="" src="https://hml.carefy.com.br/wp-content/uploads/2022/08/Logo-1500-1500-Azul-9-e1660859520882.png">
+        </h1>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <form id="form">
+          <div class="input-group input-group-lg mb-3">
+            <input type="text" id="input-search" class="form-control" placeholder="Informe a cidade">
+            <button class="btn btn-primary" type="button" id="button-search">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row container-meteorological" style="display: none;">
+      <div class="col-md-12 mt-3">
+        <div class="card">
+          <div class="card-header bg-transparent">
+            <h5 class="title-city text-center"></h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Condições meteorológicas atuais</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <i class="bi bi-clock"></i> <span class="time"></span> | 
+              <span class="day"><i class="bi bi-brightness-high"></i> Dia</span>
+              <samp class="night"><i class="bi bi-moon-stars"></i> Noite</samp>
+            </h6>
+            <div class="row">
+              <div class="col-md-6 mt-3 mb-3">
+                <h1 class="display-1">
+                  <img class="weather-icon" src="" width="88" height="88">
+                  <samp class="temp"></samp>
+                  <samp class="after-temp">C</samp>
+                </h1>
+                <p class="card-text mt-3"><strong class="weather-text"></strong></p>
+                <hr />
+                <h6 class="card-subtitle text-muted mb-3">Hoje</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card text-center">
+                      <h4 class="display-6">
+                        <span class="min-temp">36°</span>
+                        <span class="text-muted font-size-20">Mín.</span>
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card text-center">
+                      <h4 class="display-6">
+                        <span class="max-temp">36°</span>
+                        <span class="text-muted font-size-20">Máx.</span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Temperatura real <span class="badge bg-primary rounded-pill temp-real"></span></li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Chuva <span class="badge bg-primary rounded-pill rain"></span></li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Vento <span class="badge bg-primary rounded-pill wind-speed"></span></li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Rajadas de vento <span class="badge bg-primary rounded-pill wind-gust-speed"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="assets/js/jquery/jquery.min.js"></script>
+<script src="assets/js/moment/moment.min.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
