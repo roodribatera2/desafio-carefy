@@ -1,5 +1,5 @@
 const language = 'pt-br';
-const endpoint = 'http://dataservice.accuweather.com';
+const endpoint = 'https://dataservice.accuweather.com';
 const apikey = 'mAOouOTheS4Ujswtr0lBhS8S9lu3qpSg';
 
 let city, currentConditionsCity, forecastCity;
@@ -67,8 +67,9 @@ async function template(){
     $('.day').hide();
     $('.night').hide();
     
-    const momentjs = moment(currentConditionsCity.EpochTime).add(city.TimeZone.GmtOffset, 'hours');
-    let time = momentjs.format('LT');
+    const momentjs = moment(currentConditionsCity.LocalObservationDateTime);
+    
+    let time = momentjs.format('H:mm');
     let wind = forecastCity.DailyForecasts[0].Day.Wind; 
     let windGust = forecastCity.DailyForecasts[0].Day.WindGust;
     
